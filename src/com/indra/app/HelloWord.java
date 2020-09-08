@@ -1,5 +1,7 @@
 package com.indra.app;
 
+import java.util.Scanner;
+
 public class HelloWord {
     public static class HelloWorld {
         public static void main(String[] args) {
@@ -51,9 +53,102 @@ public class HelloWord {
             System.out.println(tekstas.replace('o','z'));
             //Ar string baigiasi zodziu “elit”:
             System.out.println(tekstas.endsWith("elit"));
+            // done :)<-->
 
-//          // done :)<-->
+            // nex homework .... -->
+            // condition statements -->
 
+            System.out.println("Enter the age: ");
+            Scanner usersInput =new Scanner(System.in); ;
+            String age = usersInput.nextLine();
+
+            if (Integer.parseInt(age) >= 18) {
+                System.out.println("You can vote.");
+            } else {
+                System.out.println("You cant vote.");
+            }
+
+            System.out.println("--- For different ages.");
+
+            System.out.println("Enter the age: ");
+            age = usersInput.nextLine();
+
+            int ageNumber = Integer.parseInt(age);
+
+            if (ageNumber >= 45) {
+                System.out.println("You can vote and stand as a candidate.");
+            } else if (ageNumber >= 18) {
+                System.out.println("You can vote.");
+            } else {
+                System.out.println("You cant vote.");
+            }
+
+            //  Condition statements In the End :)
+
+
+
+
+            //Cycles while for --> 1 part
+            //  never running cycles while for
+            System.out.println(" Never running");
+            boolean condition= true ;
+            while(condition = false) {
+                System.out.println("And this never running.");
+            }
+            for (;condition = false;) {
+                System.out.println("And this cycle never running.");
+            }
+
+            // Endless cycles 2part
+            // System.out.println("Endless cycle");
+            // while(condition = true) {
+            //     System.out.println("And this endless cycle.");
+            // }
+            // for (;condition = true;) {
+            //     System.out.println("And this never-ending cycle works.");
+            // }
+
+
+
+
+            // part 3 the cycle ends at the letter q
+
+            usersInput = new Scanner(System.in);
+            String inputValue = "";
+            while(!inputValue.equals("q")) {
+                System.out.println("Enter the text. ('q' the cycle is over): ");
+                inputValue = usersInput.nextLine();
+            }
+
+            //  part 4 reverse printed cycle
+            System.out.println("Cycle  reverse echo");
+            inputValue = "";
+            while(!inputValue.equals("q")) {
+                System.out.println("Enter the text. ('q' the cycle is over): ");
+                inputValue = usersInput.nextLine();
+                StringBuilder reverseInput = new StringBuilder();
+                reverseInput.append(inputValue);
+                reverseInput.reverse();
+                System.out.println(reverseInput);
+            }
+
+            // part 5  cycle literally
+            System.out.println("---------");
+            System.out.println("Cycle literally");
+
+            inputValue = "";
+            char[] charArr;
+            while(!inputValue.equals("q")) {
+                System.out.println("Enter the text. ('q' the cycle is over): ");
+                inputValue = usersInput.nextLine();
+                charArr = inputValue.toCharArray();
+                for (int i = 0; i < charArr.length; i++) {
+                    System.out.println(charArr[i] + " " + (i + 1));
+                }
+            }
+
+            // Cycles In the End :)
+            // homework 2020-09-08 done :)
 
 
         }
